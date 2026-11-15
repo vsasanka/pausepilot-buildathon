@@ -1,0 +1,20 @@
+/* Shared sample-data insights dashboard. All values explicitly illustrative. */
+.pp-insight-host{font:14px/1.5 system-ui,-apple-system,sans-serif;color:#214738;max-width:1120px;margin:0 auto}
+.pp-insight-eyebrow{font-size:11px;letter-spacing:.13em;font-weight:800;color:#3b8a6d}
+.pp-insight-title{font-size:clamp(22px,3vw,31px);line-height:1.15;letter-spacing:-.5px;margin:8px 0}
+.pp-insight-desc{color:#688074;font-size:13px;max-width:730px;line-height:1.65}
+.pp-insight-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0}
+.pp-insight-card{display:flex;flex-direction:column;gap:9px;padding:17px;border-radius:13px;background:#fff;border:1px solid #d8e7df;min-width:0}
+.pp-insight-label{font-size:12px;color:#4f7160;font-weight:750}.pp-insight-value{font-size:31px;line-height:1.15;color:#1e7157;font-variant-numeric:tabular-nums}
+.pp-insight-note{color:#71847a;font-size:11px;line-height:1.5}
+.pp-insight-chart{background:white;border:1px solid #d8e7df;border-radius:15px;padding:24px;margin:18px 0}
+.pp-insight-chart-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.pp-insight-chart-top h3{font-size:18px;margin:0}.pp-insight-select{border:1px solid #c8dcd1;padding:9px;border-radius:8px;background:white;color:#295b47}
+.pp-insight-bars{height:190px;display:grid;grid-template-columns:repeat(14,minmax(0,1fr));align-items:end;gap:7px;border-bottom:1px solid #dae9df;margin-top:18px}
+.pp-insight-bar-cell{height:100%;display:flex;align-items:end}.pp-insight-bar{background:linear-gradient(0deg,#3b9172,#a6d3b7);border-radius:5px 5px 0 0;min-height:4px;width:100%;transition:height .18s ease}
+.pp-insight-axis{display:flex;justify-content:space-between;white-space:pre-wrap;font-size:11px;color:#738879;margin-top:8px}
+.pp-insight-bottom{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pp-insight-privacy{padding:12px 15px;border:1px solid #c6decf;background:#eaf5ed;color:#386751;font-size:11px;line-height:1.6;border-radius:11px;margin:20px 0}
+@media(max-width:850px){.pp-insight-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.pp-insight-cards,.pp-insight-bottom{grid-template-columns:1fr}.pp-insight-chart{padding:14px}.pp-insight-bars{gap:3px;height:135px}}
+@media(prefers-reduced-motion:reduce){.pp-insight-bar{transition:none}}

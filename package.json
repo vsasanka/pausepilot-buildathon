@@ -1,8 +1,8 @@
 {
   "name": "pausepilot-mvp",
-  "version": "0.7.0",
+  "version": "0.9.0",
   "private": true,
-  "description": "Modular PausePilot AI for Good web demo with experimental local-only movement lab and optional local Gmail extension",
+  "description": "PausePilot modular public demo with optional relaxation, web/Chrome sample insights and motion monitoring",
   "type": "module",
   "scripts": {
     "start": "node server.js",

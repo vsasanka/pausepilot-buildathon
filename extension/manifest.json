@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "PausePilot \u2014 Pre-Send Guard (Gmail Beta)",
-  "description": "Consent-based, on-send draft review on the PausePilot demo and supported Gmail compose windows. Gmail remains beta.",
-  "version": "0.4.1",
+  "name": "PausePilot — Send Guard, Relaxation & Sample Insights (Beta)",
+  "description": "Opt-in Gmail Send Guard, local-only movement lab, calming audio, breathing guidance, and a synthetic-data insights dashboard.",
+  "version": "0.4.6",
   "minimum_chrome_version": "114",
   "permissions": [
     "storage"
@@ -28,6 +28,20 @@
         "content-script.js"
       ],
       "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "http://localhost:4173/*",
+        "https://mail.google.com/*",
+        "https://pausepilot-buildathon-demo.onrender.com/*"
+      ],
+      "js": [
+        "movement-engine.js",
+        "relaxation-core.js",
+        "movement-monitor.js"
+      ],
+      "run_at": "document_idle",
       "all_frames": false
     }
   ]

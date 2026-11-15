@@ -44,3 +44,20 @@
 .motion-disclaimer{font-size:11px!important;color:#788a80!important;line-height:1.6;margin-top:auto!important;padding-top:24px}
 @media(max-width:800px){.movement-grid{grid-template-columns:1fr}.motion-pad{min-height:260px}.motion-status{font-size:22px}}
 @media(prefers-reduced-motion:reduce){.motion-meter span{transition:none}}
+
+/* Optional sensory relief — deliberately quiet and separate from classifier. */
+.relax-studio{margin-top:22px;border:1px solid #c8e4d4;border-radius:15px;padding:18px;background:linear-gradient(145deg,#f3faf5,#fff)}
+.relax-studio h3{font-size:19px;margin:9px 0 6px;letter-spacing:-.4px}
+.relax-studio>p{font-size:12px;line-height:1.6;color:#65786d}
+.relax-sounds,.relax-actions{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}
+.relax-sound{padding:9px 11px;font-size:12px;background:white;color:#426958;border:1px solid #d6e4dc;border-radius:9px;cursor:pointer}
+.relax-sound.active{background:#ddefe2;border-color:#74b396;color:#245a43}
+.relax-volume{display:flex;align-items:center;gap:10px;font-size:12px;color:#527060}.relax-volume input{min-width:40px;flex:1;accent-color:#3e886a}.relax-volume span{font-size:11px}
+.relax-actions button{padding:9px 12px;font-size:12px;cursor:pointer}
+.relax-auto{display:flex;flex-wrap:wrap;align-items:center;gap:7px;font-size:12px;color:#355d4a;line-height:1.4;cursor:pointer}
+.relax-auto input{accent-color:#267356}.relax-auto small{display:block;width:100%;padding-left:24px;font-size:10px;color:#788f7e}
+.relax-breath{margin:16px 0;border:1px solid #d8e7dc;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;font-size:12px;color:#356b55}
+.relax-orb{width:45px;height:45px;flex-shrink:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#afe0d0,#64ae91);transform:scale(.78);transition:transform .22s linear}
+.relax-breath span{margin-left:auto;font-size:11px;color:#708b79}
+.relax-state{font-size:11px!important;color:#5c7967!important;min-height:15px}
+@media(prefers-reduced-motion:reduce){.relax-orb{transition:none;transform:none!important}}

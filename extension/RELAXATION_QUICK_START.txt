@@ -1,0 +1,12 @@
+PausePilot Chrome Extension 0.4.4 - Movement & Relaxation
+
+1. Disable your earlier PausePilot extension in chrome://extensions (avoid duplicate Gmail protection).
+2. Turn on Developer mode > Load unpacked > choose this extension folder.
+3. Enable PausePilot and Movement Monitor in popup.
+4. Open or refresh Gmail. Expand "Calming sounds & breathing" in the bottom-left widget.
+5. Click Play 30s for procedural rain/ocean/forest ambience or Start 30s breathing guide.
+6. To let pointer alerts start sound, explicitly check Auto-play (this tab only). Click Stop or disable monitoring to silence it.
+
+The movement and sound features do not need an API server. Gmail Send Guard uses localhost:4173 if separately enabled. Sound and pointer samples stay in the browser; no medical or stress diagnosis.
+
+Fix in v0.4.4: removed an invalid #pause listener that prevented setup of the Recalibrate and Play 30s controls.

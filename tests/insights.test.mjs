@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';import vm from 'node:vm';
+const source=fs.readFileSync(new URL('../public/insights-core.js', import.meta.url),'utf8');
+const extension=fs.readFileSync(new URL('../extension/insights-core.js', import.meta.url),'utf8');
+const c={};c.globalThis=c;vm.runInNewContext(source,c);
+test('mock insights dataset shared unchanged between web and extension',()=>assert.equal(source,extension));
+test('14 illustrative days with coherent, nonnegative counts',()=>{const data=c.PausePilotInsights.DATA;assert.equal(data.length,14);for(const [index,row] of data.entries()){assert.equal(row.day,`D${index+1}`);for(const k of ['flags','reviews','relaxations','revisions','helpful','unhelpful'])assert.ok(Number.isInteger(row[k])&&row[k]>=0);assert.ok(row.revisions<=row.reviews);}});
+test('metric totals and useful shares are derived not hardcoded',()=>{const s=c.PausePilotInsights.summarize();const d=c.PausePilotInsights.DATA;assert.equal(s.flags,d.reduce((a,b)=>a+b.flags,0));assert.equal(s.feedbackPositivePct,Math.round(100*s.helpful/s.feedbackCount));});
+test('demo metrics do not call network or store interaction data',()=>{assert.doesNotMatch(source,/\bfetch\s*\(|localStorage|chrome\.storage|sendBeacon|XMLHttpRequest/);assert.match(source,/SAMPLE DATA ONLY/);});
+test('extension has an accessible demo insights page and popup entry point',()=>{const html=fs.readFileSync(new URL('../extension/insights.html',import.meta.url),'utf8');const popup=fs.readFileSync(new URL('../extension/popup.js',import.meta.url),'utf8');assert.match(html,/insightsRoot/);assert.match(popup,/chrome\.tabs\.create/);});
+test('web insights tab and speech preferences exist',()=>{const html=fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8');assert.match(html,/id="insightsTab"/);assert.match(html,/id="insightsPanel"/);assert.match(html,/id="relaxVoice"/);});

@@ -104,3 +104,27 @@ export const MOVEMENT_EXPERIMENT = Object.freeze({
   stillMs:1400,
   label:'Experimental movement variability only — not stress detection',
 });
+
+// A new signal needs a fresh episode after recovery or idle, plus a cooldown.
+export function createAlertGate({cooldownMs=20000,confirmWindows=2,recoveryWindows=2}={}) {
+  let armed=true, changedStreak=0, recoveredStreak=0, lastAlert=-Infinity, alerts=0;
+  const snapshot=()=>({armed,changedStreak,recoveredStreak,lastAlert,alerts});
+  function observe(kind,time,quietUntil=0) {
+    if(kind==='changed'){
+      changedStreak++;recoveredStreak=0;
+      if(armed && changedStreak>=confirmWindows && time-lastAlert>=cooldownMs && time>=quietUntil){
+        armed=false;lastAlert=time;alerts++;return {...snapshot(),alert:true};
+      }
+    }else if(kind==='idle' || kind==='usual'){
+      changedStreak=0;recoveredStreak++;
+      if(kind==='idle' || recoveredStreak>=recoveryWindows)armed=true;
+    }else{
+      changedStreak=0;recoveredStreak=0; // insufficient data never creates an alert
+    }
+    return {...snapshot(),alert:false};
+  }
+  function reset(){armed=true;changedStreak=0;recoveredStreak=0;lastAlert=-Infinity;alerts=0;}
+  return Object.freeze({observe,snapshot,reset});
+}
+
+

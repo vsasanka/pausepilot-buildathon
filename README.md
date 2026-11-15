@@ -1,3 +1,5 @@
+> **Latest release: v0.9.** Email Guard, Comment Guard, on-device Mouse Movement Lab with persistent per-tab baseline, optional calming soundscapes and spoken breathing cues, plus a 14-day **synthetic-data** Insights dashboard in both web app and Chrome extension. No user analytics are collected by that dashboard. See [release setup](START_WEB_V09.md) and [measurement plan](docs/INSIGHTS_METRICS.md). The website is updated through Render after this GitHub commit deploys.
+
 # PausePilot — AI for Good Buildathon Demo (v0.6)
 
 **Your second thought, before your first mistake.**

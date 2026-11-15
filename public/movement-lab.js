@@ -1,4 +1,5 @@
-import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT} from './movement-core.js';
+import {summarizeMovement,hasEnoughMovement,compareMovement,createAlertGate,MOVEMENT_EXPERIMENT} from './movement-core.js';
+import {installRelaxationStudio} from './relaxation-studio.js';
 
 // The lab attaches only to a dedicated pad after explicit opt-in; data is kept
 // in short-lived JS memory and never sent to the server or stored persistently.
@@ -8,9 +9,11 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
   const tab=$('movementTab'), lab=$('movementLab'), bench=$('messageWorkbench');
   const pad=$('motionPad'), start=$('motionStart'), stop=$('motionStop');
   if(!tab || !lab || !pad) return;
+  const relax=installRelaxationStudio();
 
   let running=false, startAt=0, baseline=null, stage='idle', samples=[], lastMoveAt=0, interval=null;
-  let nudgeDismissed=false, lastSignal='';
+  const alerts=createAlertGate({cooldownMs:20000,confirmWindows:2,recoveryWindows:2});
+  let quietUntil=0;
   const status=$('motionStatus'), description=$('motionDescription'), nudge=$('motionNudge');
   const now=()=>performance.now();
 
@@ -23,7 +26,8 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
     nudge.hidden=true;
   }
   function endSession(message){
-    running=false;stage='idle';startAt=0;baseline=null;lastMoveAt=0;samples=[];lastSignal='';nudgeDismissed=false;
+    void relax.shutdown();
+    running=false;stage='idle';startAt=0;baseline=null;lastMoveAt=0;samples=[];alerts.reset();quietUntil=0;
     if(interval){clearInterval(interval);interval=null;}
     pad.classList.remove('is-monitoring');start.disabled=false;stop.disabled=true;
     resetUI();
@@ -31,18 +35,34 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
   }
   function showLab(){
     if(!$('modal').classList.contains('hidden')) return;
-    bench.hidden=true;lab.hidden=false;
+    bench.hidden=true;lab.hidden=false;document.getElementById('insightsPanel').hidden=true;document.getElementById('insightsTab').classList.remove('active');document.getElementById('insightsTab').setAttribute('aria-selected','false');resumeSession();
     tab.classList.add('active');tab.setAttribute('aria-selected','true');
     for(const b of document.querySelectorAll('[data-feature]')){b.classList.remove('active');b.setAttribute('aria-selected','false');}
   }
   function hideLab(){
     if(lab.hidden) return;
-    endSession();lab.hidden=true;bench.hidden=false;
+    pauseSession();lab.hidden=true;bench.hidden=false;
     tab.classList.remove('active');tab.setAttribute('aria-selected','false');
   }
   tab.addEventListener('click',showLab);
-  for(const b of document.querySelectorAll('[data-feature]')) b.addEventListener('click',hideLab);
+  const insightsTab=$('insightsTab'),insightsPanel=$('insightsPanel');
+  insightsTab.addEventListener('click',()=>{if(!$('modal').classList.contains('hidden'))return;hideLab();bench.hidden=true;insightsPanel.hidden=false;insightsTab.classList.add('active');insightsTab.setAttribute('aria-selected','true');for(const b of document.querySelectorAll('[data-feature]')){b.classList.remove('active');b.setAttribute('aria-selected','false');}});
+  for(const b of document.querySelectorAll('[data-feature]')) b.addEventListener('click',()=>{hideLab();insightsPanel.hidden=true;insightsTab.classList.remove('active');insightsTab.setAttribute('aria-selected','false');bench.hidden=false;});
 
+  function pauseSession(){
+    if(!running)return;
+    running=false;samples=[];lastMoveAt=0;
+    if(interval){clearInterval(interval);interval=null;}
+    status.textContent='Paused · baseline kept';description.textContent='Return to this tab to resume. Recent pointer samples were cleared.';
+  }
+  function resumeSession(){
+    if(running||stage==='idle'||document.hidden||!document.hasFocus()||lab.hidden)return;
+    if(!baseline){stage='baseline';startAt=now();}else stage='monitor';
+    samples=[];lastMoveAt=0;running=true;
+    status.textContent=baseline?'Baseline restored':'Building baseline · 5s';
+    description.textContent=baseline?'Monitoring resumed without recalibration.':'Move naturally to calibrate.';
+    interval=setInterval(tick,350);
+  }
   function onMove(event){
     if(!running || event.pointerType!=='mouse' || document.hidden || lab.hidden) return;
     const t=now();
@@ -78,7 +98,7 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
         $('motionPadLabel').textContent='Keep moving naturally in this pad to complete calibration.';
         return;
       }
-      baseline=candidate;stage='monitor';samples=[];lastMoveAt=0;
+      baseline=candidate;stage='monitor';samples=[];lastMoveAt=0;alerts.reset();
       status.textContent='Baseline ready';description.textContent='Now try moving normally or making quick zigzags. We will compare only short movement windows.';
       $('motionPadLabel').textContent='Move your cursor here. Try a few deliberate zigzags to explore the indicator.';
       return;
@@ -89,6 +109,7 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
       status.textContent='Waiting for movement';description.textContent='Move your cursor within the pad to compare with your baseline.';
       $('motionVariationLabel').textContent='No recent motion';$('motionVariationFill').style.width='0%';
       $('motionVariationFill').classList.remove('elevated');
+      alerts.observe('idle',t,quietUntil);samples=[];lastMoveAt=0;
       return;
     }
     showMetrics(metrics);
@@ -97,6 +118,7 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
       status.textContent='Gathering observations';description.textContent='A little more movement is needed for this short window.';
       $('motionVariationLabel').textContent='Collecting';$('motionVariationFill').style.width='12%';
       $('motionVariationFill').classList.remove('elevated');
+      alerts.observe('insufficient',t,quietUntil);
       return;
     }
     status.textContent=signal.state==='changed'?'Movement variation increased':'Movement near baseline';
@@ -104,8 +126,10 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
     $('motionVariationLabel').textContent=signal.state==='changed'?'Elevated variation':'Within comparison range';
     $('motionVariationFill').style.width=signal.variation+'%';
     $('motionVariationFill').classList.toggle('elevated',signal.state==='changed');
-    if(signal.state==='changed' && lastSignal!=='changed' && !nudgeDismissed) nudge.hidden=false;
-    lastSignal=signal.state;
+    const result=alerts.observe(signal.state==='changed'?'changed':'usual',t,quietUntil);
+    if(result.alert && !relax.shouldQuiet()){
+      nudge.hidden=false;void relax.onMovementAlert();
+    }
   }
   start.addEventListener('click',()=>{
     endSession();
@@ -117,9 +141,9 @@ import {summarizeMovement,hasEnoughMovement,compareMovement,MOVEMENT_EXPERIMENT}
     interval=setInterval(tick,350);
   });
   stop.addEventListener('click',()=>endSession('Stopped · data cleared'));
-  $('motionDismiss').addEventListener('click',()=>{nudgeDismissed=true;nudge.hidden=true;});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden&&running)endSession('Stopped when tab was hidden');});
-  window.addEventListener('blur',()=>{if(running)endSession('Stopped when window lost focus');});
+  $('motionDismiss').addEventListener('click',()=>{nudge.hidden=true;quietUntil=now()+20000;});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseSession();else resumeSession();});
+  window.addEventListener('blur',pauseSession);window.addEventListener('focus',resumeSession);
   window.addEventListener('pagehide',()=>endSession());
   resetUI();
 })();

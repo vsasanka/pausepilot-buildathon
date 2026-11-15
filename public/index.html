@@ -6,8 +6,10 @@
   <title>PausePilot — One second between impulse and action</title>
   <meta name="description" content="PausePilot is an opt-in pre-send review experience. It helps you pause before a potentially regrettable message." />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/insights.css" />
   <script defer src="/app.js"></script>
   <script type="module" src="/movement-lab.js"></script>
+  <script type="module" src="/insights-page.js"></script>
 </head>
 <body>
   <div class="shell">
@@ -25,6 +27,7 @@
         <button type="button" class="feature-tab active" data-feature="email" role="tab" aria-selected="true">✉ Email Send Guard</button>
         <button type="button" class="feature-tab" data-feature="comment" role="tab" aria-selected="false">💬 Comment Guard</button>
         <button type="button" id="movementTab" class="feature-tab feature-tab-experimental" role="tab" aria-selected="false" aria-controls="movementLab">↝ Mouse Movement Lab <span class="exp-label">EXPERIMENTAL</span></button>
+        <button type="button" id="insightsTab" class="feature-tab" role="tab" aria-selected="false" aria-controls="insightsPanel">◫ Insights <span class="exp-label">SAMPLE DATA</span></button>
       </nav>
       <div class="workbench" id="messageWorkbench">
         <section class="pane composer">
@@ -65,7 +68,7 @@
               <div class="motion-pad-label" id="motionPadLabel">Press Start, then move slowly and naturally in this area.</div>
               <span class="motion-pad-corner" aria-hidden="true">MOVEMENT ZONE ONLY</span>
             </div>
-            <div class="motion-privacy"><span aria-hidden="true">◈</span><span><strong>Private by default.</strong> No motion tracking before Start. No tracking outside this area, no background recording, no server calls, no browser storage. Stop clears the measurement. Switching tabs or leaving the page also stops it.</span></div>
+            <div class="motion-privacy"><span aria-hidden="true">◈</span><span><strong>Private by default.</strong> No motion tracking before Start. No tracking outside this area, no background recording, no server calls, no browser storage. Stop clears the measurement. Switching tabs pauses monitoring and clears temporary samples; returning restores the baseline while this page stays open.</span></div>
           </section>
           <aside class="pane motion-insight" aria-label="Movement measurements">
             <div class="micro">LIVE OBSERVATION</div>
@@ -74,12 +77,33 @@
             <div class="motion-meter-label"><span>Movement variation</span><span id="motionVariationLabel">No data</span></div>
             <div class="motion-meter" role="presentation"><span id="motionVariationFill" style="width:0%"></span></div>
             <div class="motion-metrics"><div><span>Directional changes / second</span><b id="motionTurnRate">—</b></div><div><span>Movement speed (pixels / sec)</span><b id="motionSpeed">—</b></div></div>
-            <div class="motion-nudge" id="motionNudge" hidden><b>A small pause might help.</b><p>Your movement has changed compared with your brief baseline. That could have many causes. Would you like to rest your hands for a moment?</p><button type="button" class="secondary" id="motionDismiss">Dismiss</button></div>
+            <div class="motion-nudge" id="motionNudge" hidden><b>A small pause might help.</b><p>Your movement has changed compared with your brief baseline. That could have many causes. Would you like to rest your hands for a moment?</p><button type="button" class="secondary" id="motionDismiss">Dismiss</button><button type="button" class="secondary" id="relaxNudgePlay">▶ Play calming sound</button><button type="button" class="secondary" id="relaxNudgeQuiet">Quiet for 5 min</button></div>
+            <section class="relax-studio" id="relaxStudio" aria-label="Optional sensory relaxation">
+              <div class="micro">UNWIND · OPTIONAL</div>
+              <h3>A moment to reset</h3>
+              <p>Try gentle, original soundscapes and a slow breathing guide. Neither is a treatment or a measure of stress. Sound stays off until you start it.</p>
+              <div class="relax-sounds" role="group" aria-label="Choose a soundscape">
+                <button type="button" class="relax-sound active" data-sound="rain" aria-pressed="true">🌧 Rain</button>
+                <button type="button" class="relax-sound" data-sound="ocean" aria-pressed="false">🌊 Ocean</button>
+                <button type="button" class="relax-sound" data-sound="forest" aria-pressed="false">🌿 Forest</button>
+              </div>
+              <label class="relax-volume" for="relaxVolume">Volume <input id="relaxVolume" type="range" min="0" max="16" value="8" aria-label="Sound volume"/><span id="relaxVolumeLabel">Low</span></label>
+              <div class="relax-actions"><button type="button" class="secondary" id="relaxPlay">▶ Play 30s</button><button type="button" class="secondary" id="relaxStop">■ Stop</button></div>
+              <label class="relax-auto"><input id="relaxAuto" type="checkbox"/> Allow automatic sound after a movement alert <small>Off by default · enabled only for this page session</small></label>
+              <div class="relax-breath" id="relaxBreath" hidden>
+                <div class="relax-orb" id="relaxOrb" aria-hidden="true"></div><b id="relaxBreathLabel">Inhale gently</b>
+                <span id="relaxBreathTime">30 seconds</span>
+              </div>
+              <button type="button" class="secondary" id="relaxBreathe">Start 30s breathing guide</button>
+              <label class="relax-auto"><input id="relaxVoice" type="checkbox"/> Speak breathing cues (optional) <small>Uses your browser’s speech voice; off by default.</small></label>
+              <p class="relax-state" id="relaxState" role="status" aria-live="polite">Silent until you opt in.</p>
+            </section>
             <p class="motion-disclaimer">This is an unvalidated behavioral prototype. Device sensitivity, desk space, tasks, disability, and individual preferences can affect the signal. No diagnosis or stress score is generated.</p>
           </aside>
         </div>
       </section>
-      <section class="details" id="how"><div><div class="micro">PRIVACY BY DESIGN</div><h2>One check. Your choice.</h2></div><p>Email and Comment Guard evaluate drafts only when you press Send or Post. Mouse Movement Lab is a separate, explicit opt-in and only processes pointer movement within its test area in your browser. No mouse coordinates are transmitted or stored. The website never sends actual messages, records background keystrokes, or diagnoses your mental state. In AI mode, draft text—not pointer motion—is shared with the configured provider when you click Send/Post.</p></section>
+      <section id="insightsPanel" class="pane" hidden aria-label="Sample insights dashboard"><div id="insightsRoot" class="pp-insight-host"></div></section>
+      <section class="details" id="how"><div><div class="micro">PRIVACY BY DESIGN</div><h2>One check. Your choice.</h2></div><p>Email and Comment Guard evaluate drafts only when you press Send or Post. Mouse Movement Lab is a separate, explicit opt-in and only processes pointer movement within its test area in your browser. Its optional relaxation sounds are generated locally and never uploaded. No mouse coordinates are transmitted or stored. The website never sends actual messages, records background keystrokes, or diagnoses your mental state. In AI mode, draft text—not pointer motion—is shared with the configured provider when you click Send/Post.</p></section>
     </main>
     <footer>PausePilot · Buildathon MVP · This is not a crisis support or medical service. All sends and posts are simulated.</footer>
   </div>
