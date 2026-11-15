@@ -1,6 +1,6 @@
 > **Latest release: v0.9.** Email Guard, Comment Guard, on-device Mouse Movement Lab with persistent per-tab baseline, optional calming soundscapes and spoken breathing cues, plus a 14-day **synthetic-data** Insights dashboard in both web app and Chrome extension. No user analytics are collected by that dashboard. See [release setup](START_WEB_V09.md) and [measurement plan](docs/INSIGHTS_METRICS.md). The website is updated through Render after this GitHub commit deploys.
 
-# PausePilot — AI for Good Buildathon Demo (v0.6)
+# PausePilot — AI for Good Buildathon Demo (v0.9)
 
 **Your second thought, before your first mistake.**
 
@@ -42,12 +42,20 @@ The second command makes one billable model request. A browser tested the five m
 
 ## Evidence, in context
 
-- 160 synthetic functional examples: **140/160** matched original rule baseline labels (87.5%). This is **not** the specialized live AI score.
+- **160 synthetic functional examples with 40 completed human reviews**: after one reviewer label correction, **139/160** matched the original deterministic rules baseline (86.9%). This is **not** the specialized live AI score.
 - Preliminary 12-case pilot: specialized AI **11/12** (91.7%); plain LLM **10/12** (83.3%); rules **9/12** (75%). Sample too small for robust generalization.
 - 75 curated offline safety examples: original rules **67/75**; guarded rules after crisis patch **75/75**. This does not establish real-world safety.
-- **30+ human-reviewed benchmark labels are still pending**, along with the full live AI benchmark.
+- **40 human-reviewed benchmark labels have been recorded** in [eval/data/manual_review_queue.csv](eval/data/manual_review_queue.csv) and the [reviewed dataset](eval/data/tasks.jsonl). The full paid live-AI benchmark is still pending.
 
 See [docs/eval_report.md](docs/eval_report.md), [docs/crisis_fix_report.md](docs/crisis_fix_report.md), [safety/results/phase4-guarded.md](safety/results/phase4-guarded.md). These artifacts are intended for transparent reporting, not as claims of clinical efficacy.
+
+## Final submission links
+
+- **Public web application:** https://pausepilot-buildathon-demo.onrender.com
+- **Source code / how to run:** This README; `npm install`, `npm test`, `npm start`
+- **Evaluation report:** [docs/eval_report.md](docs/eval_report.md) (160 cases, 40 hand-reviewed)
+- **Safety report:** [docs/safety_report.md](docs/safety_report.md) and [guarded results](safety/results/phase4-guarded.md) (75 red-team cases)
+- **Submission folder:** pitch PDF and the team-recorded ~90-second video must be uploaded separately to the organizer's team Drive.
 
 ## Deployment and costs
 

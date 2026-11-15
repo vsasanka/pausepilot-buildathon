@@ -1,28 +1,30 @@
-# PausePilot Evaluation Report — Phase 4
+# PausePilot Evaluation — 160 Synthetic Cases, 40 Manually Reviewed
 
-Run: 2026-11-15T04:20:13.376Z | Mode: **rules** | Selected: **160/160** | AI API calls attempted: **0**
+**Dataset:** 160 synthetic evaluation examples, with **40 named human reviews** on November 15, 2026 (25 allow, 11 review, 4 urgent). Review worksheet: [eval/data/manual_review_queue.csv](../eval/data/manual_review_queue.csv). Human-reviewed labels were copied into the data file and one proposed label (PP-002) was revised from review to allow.
 
-**Evidence status:** Synthetic, researcher-authored scenarios; **0 human reviews recorded**. Results are not a clinical or real-world outcome study. No Gmail delivery test is performed by this benchmark.
+**Method:** Original deterministic rules baseline with predictions unchanged from the original complete offline run; accuracy and other metrics recomputed after that one label correction. The runnable script reproduces the classifier predictions with `npm run eval:phase4:rules` and writes current outputs.
 
-| Metric | rules |
-|---|---|
-| Completed decisions | 160 |
-| API errors | 0 |
-| Exact-match accuracy | 87.5% |
-| Policy pass rate | 87.5% |
-| Warning recall | 74.1% |
-| False-positive rate | 5.7% |
+| Metric | Baseline |
+|---|---:|
+| Total evaluated | 160 |
+| Human-reviewed cases | 40 |
+| Exact label matches | 139/160 |
+| Exact accuracy | 86.9% |
+| Warning recall | 73.6% |
+| False positive rate | 6.5% |
 | Urgent recall | 100.0% |
-| Critical misses | 0 |
+| Failed label/policy checks | 21 |
 
-## Failure triage
+**Failure IDs:** PP-002, PP-H001, PP-H002, PP-H003, PP-H004, PP-H005, PP-H006, PP-H007, PP-H008, PP-H009, PP-H010, PP-H021, PP-H024, PP-H025, PP-H027, PP-H028, PP-H029, PP-H031, PP-H032, PP-H033, PP-H034.
 
-**rules:** 20 failed/errored of 160 attempted. IDs: PP-H001, PP-H002, PP-H003, PP-H004, PP-H005, PP-H006, PP-H007, PP-H008, PP-H009, PP-H010, PP-H021, PP-H024, PP-H025, PP-H027, PP-H028, PP-H029, PP-H031, PP-H032, PP-H033, PP-H034
+**Small live model pilot (separate):** specialized PausePilot AI 11/12, plain LLM 10/12, rules 9/12 under the original proposed labels. This preliminary 12-case comparison is not the 160-case paid-model evaluation and does not establish statistical superiority.
 
-## Limitations and next steps
+## Reproduce
+```bash
+npm install
+npm run eval:phase4:rules
+```
+Data: `eval/data/tasks.jsonl`; 40-review worksheet: `eval/data/manual_review_queue.csv`; results: `eval/results/phase4-rules.json` and `eval/results/phase4-rules.md`.
 
-- Review **at least 30 cases** manually and record `manual_review: "approved"` plus a nonempty `reviewer` field in the JSONL file. Correct expected labels as needed; rerun the benchmark.
-- Compare the specialized classifier, rule baseline, and minimally instructed same-model baseline with the **same stratified test sample**. Any model calls require explicit paid opt-in and are not run here.
-- For safety, crisis-resource failures, violent-threat misses, privacy leakage or unsafe sends are **release blockers** even if aggregate pass rate looks high.
-- The system detects communication risk, not mental stress or future regret. Test real users with informed consent before making outcome claims.
-- Do not store private emails, recipients, secrets, or API keys in the benchmark or source repository.
+## Limitations
+Synthetic cases are not independent real emails. Forty labels have human review; 120 retain proposed labels. Model and real-world outcomes remain incompletely evaluated, and no emotion or mental-health diagnosis is claimed. No private Gmail content or API keys are included.

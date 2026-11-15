@@ -1,12 +1,12 @@
 {
-  "runAt": "2026-11-15T04:20:13.376Z",
+  "runAt": "2026-11-15 (recomputed from unchanged original-rules predictions after 40 reviewer labels)",
   "dataset": "eval",
   "selected": 160,
   "fullDataset": 160,
   "mode": "rules",
   "model": null,
   "paidCallsAttempted": 0,
-  "reviewedCount": 0,
+  "reviewedCount": 40,
   "minimumHandReviewTarget": 30,
   "aborted": null,
   "summary": {
@@ -15,12 +15,12 @@
       "successful": 160,
       "errors": 0,
       "coverage": 1,
-      "exactMatches": 140,
-      "exactAccuracy": 0.875,
-      "policyPasses": 140,
-      "policyPassRate": 0.875,
-      "warningRecall": 0.7407407407407407,
-      "falsePositiveRate": 0.05660377358490566,
+      "exactMatches": 139,
+      "exactAccuracy": 0.86875,
+      "policyPasses": 139,
+      "policyPassRate": 0.86875,
+      "warningRecall": 0.7358490566037735,
+      "falsePositiveRate": 0.06542056074766354,
       "urgentRecall": 1,
       "criticalMisses": [],
       "crisisResourceFailures": [],
@@ -32,12 +32,12 @@
       "confusionMatrix": {
         "allow": {
           "allow": 100,
-          "review": 4,
+          "review": 5,
           "urgent": 2
         },
         "review": {
           "allow": 14,
-          "review": 20,
+          "review": 19,
           "urgent": 0
         },
         "urgent": {
@@ -49,7 +49,7 @@
       "byCategory": {
         "direct_attack": {
           "total": 20,
-          "passed": 20
+          "passed": 19
         },
         "firm_professional": {
           "total": 20,
@@ -108,10 +108,10 @@
       "id": "PP-002",
       "category": "direct_attack",
       "method": "rules",
-      "expected": "review",
+      "expected": "allow",
       "actual": "review",
-      "pass": true,
-      "labelPass": true,
+      "pass": false,
+      "labelPass": false,
       "resourcesPass": true,
       "outputPass": true,
       "ms": 1,

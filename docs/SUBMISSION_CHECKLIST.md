@@ -1,6 +1,6 @@
 # Submission status and remaining actions (November 15, 2026)
 
-The kickoff deck says code freeze and form submission are due **Sunday, November 15 at 12:00 PM**. Confirm the organizer's intended timezone.
+The final participant guide specifies **Sunday, November 15, 2026, at 12:00 PM PST** (1:00 PM Arizona time). Upload the complete team folder to https://tiny.cc/BuildTeams26. The 90-second demo has been recorded by the team and must be added to the upload folder.
 
 - [x] Public live interactive demo: https://pausepilot-buildathon-demo.onrender.com
 - [x] Main website flows manually verified by builder in incognito mode.
@@ -9,7 +9,7 @@ The kickoff deck says code freeze and form submission are due **Sunday, November
 - [x] Reproducible offline evaluation / safety scripts and results.
 - [x] Initial AI pilot comparison documented (12 examples only).
 - [x] Offline guarded-rule safety suite passed 75/75 curated tests after crisis fix.
-- [ ] Perform and record **30 or more human reviews** (0 currently recorded).
+- [x] Completed **40 named human reviews**; corrected one proposed label and updated eval/data/tasks.jsonl and eval report.
 - [ ] Run full live AI evaluation and safety comparison, or prominently label pilot results as preliminary.
 - [ ] Verify hosted API smoke tests from a laptop:
     `npm run smoke:deploy -- https://pausepilot-buildathon-demo.onrender.com`
