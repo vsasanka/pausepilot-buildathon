@@ -1,33 +1,54 @@
-# PausePilot — Buildathon Public Demo v0.6
+# PausePilot — AI for Good Buildathon Demo (v0.6)
 
-**An opt-in second thought before a digital action.** A browser-based demonstration of potentially impulsive communications being reviewed *at send/post time*, with user control, model-independent crisis guardrails, and optional real AI classification.
+**Your second thought, before your first mistake.**
 
-## Try locally
+- **Public interactive demo:** https://pausepilot-buildathon-demo.onrender.com
+- **Source repository:** https://github.com/vsasanka/pausepilot-buildathon
+- **Judge overview:** [docs/JUDGE_README.md](docs/JUDGE_README.md)
+- **Pitch and recording:** [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md)
+- **Submission checklist:** [docs/SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md)
+
+PausePilot is an opt-in AI-assisted pre-send/pre-post reconsideration demo for adults who write email or comments under pressure. The website simulates sending/posting; **it never sends real emails or publishes actual comments**. It does not infer or diagnose emotions.
+
+## Public features
+
+- **Email Guard:** Write a draft, attempt a simulated send, receive a contextual review when warranted, or return to editing with text intact.
+- **Comment Guard:** Test the same AI and safety layer before a simulated social comment is posted.
+- **Safety controls:** Deterministic crisis-support response for certain explicit statements, user-controlled decisions, signed anonymous web sessions, CSRF checks and in-memory request caps.
+- **Expandable architecture:** Add new modules through [features/registry.js](features/registry.js) and [docs/ADDING_FEATURES.md](docs/ADDING_FEATURES.md).
+
+An **independent local Gmail extension proof of concept** was manually tested: opt-in send interception, return to editing, draft preservation and one self-addressed authorized delivery were confirmed. The public website does not automatically install or connect that extension.
+
+## Running locally
 
 ```bash
 npm test
+npm run security:audit
 npm start
 ```
 
-Visit `http://localhost:4173` to use the offline rule-based mode. To use paid AI classification instead, create a **local, untracked** `.env` file from `.env.example` containing `OPENAI_API_KEY`, then run:
+Open http://localhost:4173 for rule-based demo mode. For live AI on a developer machine, create an untracked `.env` from `.env.example` with your own `OPENAI_API_KEY`, then run `npm run start:ai`. Never commit `.env`.
+
+## Check the hosted deployment
 
 ```bash
-npm run start:ai
+npm run smoke:deploy -- https://pausepilot-buildathon-demo.onrender.com
+npm run smoke:deploy -- https://pausepilot-buildathon-demo.onrender.com --ai
 ```
 
-**Live deployment:** see [`DEPLOY_PUBLIC.md`](DEPLOY_PUBLIC.md). This ZIP does not itself create a public URL; deploy it from GitHub to Render to obtain an actual HTTPS link.
+The second command makes one billable model request. A browser tested the five main user flows, including the incognito experience. The external smoke-test command has not yet been confirmed.
 
-## Features
+## Evidence, in context
 
-- **Email Send Guard:** simulated email composer with context-aware review.
-- **Comment Guard:** simulated comment composer reusing the same protected analysis service.
-- **Shared safety layer:** direct crisis examples receive supported resources without requiring paid model access.
-- **Controlled demonstration:** no outgoing emails or real comments; no keylogging or passive surveillance.
-- **Extendable design:** feature definitions in [`features/registry.js`](features/registry.js), guide at [`docs/ADDING_FEATURES.md`](docs/ADDING_FEATURES.md).
-- **Hackathon evidence:** evaluation and red-team datasets plus reproducible scripts remain included.
+- 160 synthetic functional examples: **140/160** matched original rule baseline labels (87.5%). This is **not** the specialized live AI score.
+- Preliminary 12-case pilot: specialized AI **11/12** (91.7%); plain LLM **10/12** (83.3%); rules **9/12** (75%). Sample too small for robust generalization.
+- 75 curated offline safety examples: original rules **67/75**; guarded rules after crisis patch **75/75**. This does not establish real-world safety.
+- **30+ human-reviewed benchmark labels are still pending**, along with the full live AI benchmark.
 
-The v0.4.1 Chrome extension is retained in the `extension` folder for local Gmail testing, but public hosting does not connect the extension to the server.
+See [docs/eval_report.md](docs/eval_report.md), [docs/crisis_fix_report.md](docs/crisis_fix_report.md), [safety/results/phase4-guarded.md](safety/results/phase4-guarded.md). These artifacts are intended for transparent reporting, not as claims of clinical efficacy.
 
-## Important limits
+## Deployment and costs
 
-This is a hackathon prototype, not a mental-health diagnosis or emergency-support product. Anonymous demo sessions and in-memory request caps are not adequate identity or financial controls for a large public launch. Use dedicated API credits, enforce a provider-level spending limit, and test with synthetic text.
+The app runs as one Render web service using [render.yaml](render.yaml). `OPENAI_API_KEY` must remain on the server. The anonymous session gate and in-memory caps are **not full user authentication**, and limits reset on service restart. Enforce a conservative OpenAI project spending limit for public demos. Render Free services may sleep when idle.
+
+**This is a prototype, not a medical, diagnostic, or emergency response service.**

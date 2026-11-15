@@ -1,15 +1,26 @@
-# PausePilot — problem statement (working draft)
+# PausePilot — Problem, solution, and evidence
 
-**Who:** Adults using email at work or school who want an optional second thought before sending potentially aggressive messages.
+**Target user:** Adults in college and early-career roles who write email or online comments under time pressure.
 
-**Problem:** Written communication can be sent in seconds, while the consequences of personal attacks and threats may be lasting. Asking an already upset person to open a wellbeing chatbot is too late for the moment of action.
+**Problem:** It is easy to send a personal attack or other potentially regrettable message faster than one can reflect. An app that requires a user to recognize and type out their stress misses the decisive instant. We focus on a user's **digital action**, not diagnosing their mental state.
 
-**Solution:** An opt-in Chrome extension detects a supported Gmail Send attempt, checks the drafted message for potential personal attacks or serious threats, and offers an optional review while preserving the original draft. The user can edit, keep, or explicitly approve the next Send. No emotion diagnosis is attempted.
+**External evidence of need:** Twitter reported that 34% of users receiving reconsideration prompts revised or did not send their initial reply in its early tests (Twitter product blog, May 5, 2021). A separate randomized study reported 6% fewer offensive posts among prompted users relative to controls (Katsaros et al., ICWSM, 2022). These figures are **not PausePilot results**.
+- https://blog.x.com/en_us/topics/product/2021/tweeting-with-consideration
+- https://arxiv.org/abs/2112.00773
 
-**Why AI:** Contextual language classification helps distinguish directly abusive messages from strong but legitimate professional criticism, quoted reports, and code-switched language better than simple keyword rules might. This must be demonstrated by benchmarks rather than assumed.
+**Our solution:** A controlled, opt-in intervention at Send/Post time. PausePilot analyzes the user's drafted text, offers a brief context-aware explanation when warranted, and lets the user **return to editing, retain a draft, or proceed**. The public website simulates sends and posts; no real content is delivered.
 
-**Evidence and validation:** The builder confirmed the Gmail intervention and precisely one self-addressed message delivered after a two-step approval. The original rules baseline currently scores 87.5% on 160 synthetic evaluation examples, with errors in subtle/quoted/multilingual cases. Real AI's complete benchmark remains unrun. The 75-case safety suite exposed eight critical self-harm signal misses in the rules-only path; the product is **not yet crisis-safe**.
+**Why AI:** Meaning depends on context, including quotations, sarcasm, multilingual text and professionally assertive communication. Our specialized AI aims to reduce both missed risk and unnecessary interruptions compared with crude keyword rules. The results so far are preliminary, not a claim of superior field performance.
 
-**Privacy and responsibility:** Explicit per-site opt-in; draft analyzed only on Send; user approval required; no routine keystroke recording; do not test with confidential email. The API requires security hardening prior to public deployment.
+**Delivered:** A public interactive web app with Email Guard and Comment Guard, verified manually across five user flows in incognito mode. Separately, an opt-in local Chrome extension was manually tested inside Gmail, including a single user-approved delivery with no duplicate.
 
-**Current outcome claim:** A functional, opt-in pre-send reconsideration prototype exists. We have **not** proven that it reduces regret, treats stress, or detects mental health states.
+**Measurements and limits:**
+- Initial 12-case live pilot: specialized AI 11/12; plain LLM 10/12; rules 9/12 exact label matches. The sample is very small.
+- Full 160-case **original rules** baseline: 140/160 label matches (87.5%); the equivalent full paid-model evaluation is pending.
+- Curated offline safety suite: 75/75 guarded-rule checks after crisis fix, compared with 67/75 old rules; does not show general safety on unseen material.
+- At least 30 human reviews are required for the hackathon and are **not yet documented**.
+- The product has not demonstrated any real-world reduction in stress, regret or offensive communication.
+
+**Responsible AI:** No emotional diagnosis or routine keystroke collection; opt-in; no automatic sending; draft preservation; crisis resources for certain clear statements; provider key remains server-side; browser sessions and request rate limits. Public messages may be sent to the AI provider on Send/Post. Do not enter confidential information. Anonymous demo sessions and in-memory caps are not production-grade financial/security guarantees.
+
+**Next distribution channel:** University and early-career communities for validated, voluntary testing. The real Chrome extension can be submitted to the Chrome Web Store after appropriate permission, privacy and security review.
