@@ -1,0 +1,1214 @@
+{
+  "summary": {
+    "total": 120,
+    "passed": 120,
+    "accuracy": 1,
+    "warningRecall": 1,
+    "falsePositiveRate": 0,
+    "mode": "demo-rules",
+    "manuallyReviewed": 0,
+    "labelStatus": "PENDING MANUAL REVIEW"
+  },
+  "results": [
+    {
+      "id": "PP-001",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 1,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-002",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-003",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-004",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-005",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 1,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-006",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-007",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-008",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-009",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-010",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-011",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-012",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-013",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-014",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-015",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-016",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-017",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-018",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-019",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-020",
+      "category": "direct_attack",
+      "expected": "review",
+      "actual": "review",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-021",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-022",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-023",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-024",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-025",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-026",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-027",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-028",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-029",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-030",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-031",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-032",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-033",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-034",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-035",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-036",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-037",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-038",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-039",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-040",
+      "category": "firm_professional",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-041",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-042",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-043",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-044",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-045",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-046",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-047",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-048",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-049",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-050",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-051",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-052",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-053",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-054",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-055",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-056",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-057",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-058",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-059",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-060",
+      "category": "ordinary",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-061",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-062",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-063",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-064",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-065",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-066",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-067",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-068",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-069",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-070",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-071",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-072",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-073",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-074",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-075",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-076",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-077",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-078",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-079",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-080",
+      "category": "quoted_or_reported",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-081",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-082",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-083",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-084",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-085",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-086",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-087",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-088",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-089",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-090",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-091",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-092",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-093",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-094",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-095",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-096",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-097",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-098",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-099",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-100",
+      "category": "threat",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-101",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-102",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-103",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-104",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-105",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-106",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-107",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-108",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-109",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-110",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-111",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-112",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-113",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-114",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-115",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-116",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-117",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-118",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-119",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    },
+    {
+      "id": "PP-120",
+      "category": "ambiguous_emphasis",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "ms": 0,
+      "mode": "demo-rules",
+      "manual_review": "pending"
+    }
+  ]
+}

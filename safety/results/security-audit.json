@@ -1,0 +1,51 @@
+[
+  {
+    "id": "SEC-1",
+    "severity": "info",
+    "name": "Scope of extension permissions",
+    "status": "PASS",
+    "evidence": "The extension currently targets localhost and Gmail; deployed public URL is web-only."
+  },
+  {
+    "id": "SEC-2",
+    "severity": "medium",
+    "name": "Gmail opt-in",
+    "status": "PASS",
+    "evidence": "Gmail monitoring remains separately opt-in."
+  },
+  {
+    "id": "SEC-3",
+    "severity": "high",
+    "name": "Anonymous session gate and CSRF",
+    "status": "PASS",
+    "evidence": "Signed short-lived session, strict same-origin gate and CSRF token. Anonymous sessions are not account authentication."
+  },
+  {
+    "id": "SEC-4",
+    "severity": "high",
+    "name": "Usage caps",
+    "status": "PASS",
+    "evidence": "Per-IP, per-session, concurrent and process-wide caps; reset on restarts, not a financial guarantee."
+  },
+  {
+    "id": "SEC-5",
+    "severity": "medium",
+    "name": "Cross-origin behavior",
+    "status": "PASS",
+    "evidence": "Production cross-site API requests denied. Local Chrome-extension loopback is development-only."
+  },
+  {
+    "id": "SEC-6",
+    "severity": "high",
+    "name": "Deterministic crisis support",
+    "status": "PASS",
+    "evidence": "A narrow deterministic guard adds 988 resources in recognized self-harm cases; not comprehensive detection."
+  },
+  {
+    "id": "SEC-7",
+    "severity": "medium",
+    "name": "API key not embedded in extension",
+    "status": "PASS",
+    "evidence": "Provider API key is supplied server-side via an environment variable."
+  }
+]

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PausePilot — One second between impulse and action</title>
+  <meta name="description" content="PausePilot is an opt-in pre-send review experience. It helps you pause before a potentially regrettable message." />
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="wordmark"><span class="brandmark">✳</span> PausePilot <span class="version">BETA</span></div>
+      <div class="topright"><span id="extensionState" class="chip">Web-only mode</span><span id="guardState" class="chip">Guard: initializing</span><a href="#how">How it works</a></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="dot"></span> A mindful layer for the moments that matter</div>
+        <h1>Your second thought,<br/><em>before your first mistake.</em></h1>
+        <p>A small pause before a message becomes permanent. PausePilot checks a draft when you try to send, then offers you the choice to reconsider—without guessing your emotions.</p>
+      </section>
+      <nav id="featureTabs" class="feature-tabs" aria-label="Choose demo feature" role="tablist">
+        <button type="button" class="feature-tab active" data-feature="email" role="tab" aria-selected="true">✉ Email Send Guard</button>
+        <button type="button" class="feature-tab" data-feature="comment" role="tab" aria-selected="false">💬 Comment Guard</button>
+        <span class="coming-soon">Focus Drift · Coming later</span>
+      </nav>
+      <div class="workbench">
+        <section class="pane composer">
+          <div class="paneheading"><div><div class="micro">LIVE INTERACTIVE DEMO</div><h2 id="composeTitle">Compose an email</h2></div><span class="hint" id="composerHint">Simulation only · No email is sent</span></div>
+          <form id="demoCompose" autocomplete="off">
+            <div class="formline" id="recipientRow"><label for="recipient">To</label><input id="recipient" value="alex@example.com" type="email" aria-label="Recipient" required></div>
+            <div class="formline" id="subjectRow"><label for="subject">Subject</label><input id="subject" value="Report update" aria-label="Subject" maxlength="120"></div>
+            <label class="bodylabel" for="messageBody" id="bodyLabel">Email message</label>
+            <textarea id="messageBody" name="messageBody" rows="9" maxlength="5000" required>You've messed this up again. Do you even read my emails? Fix it immediately.</textarea>
+            <div class="actions"><span id="characters" class="counter">0 / 5000</span><button type="submit" id="sendButton" class="primary"><span id="sendText">Send email</span> <span aria-hidden="true">↗</span></button></div>
+          </form>
+          <div id="activity" class="activity" role="status" aria-live="polite">Your draft is analyzed only when you press the action button. No real messages are delivered.</div>
+          <div class="examples"><span>Try a scenario:</span>
+            <span id="exampleButtons"><button type="button" class="example" data-example="angry">Personal attack</button><button type="button" class="example" data-example="firm">Firm but professional</button><button type="button" class="example" data-example="quoted">Quoted complaint</button></span>
+          </div>
+        </section>
+        <aside class="pane insight">
+          <div class="micro">YOUR SAFETY NET</div>
+          <div class="orb"><span>✳</span></div>
+          <h2>A moment to choose.</h2>
+          <p>You write as usual. When you attempt to send, PausePilot checks whether a quick review might help.</p>
+          <div class="steps"><div><b>01</b><span>Write without interruption</span></div><div><b>02</b><span>Evaluate at send time</span></div><div><b>03</b><span>You decide what to do</span></div></div>
+          <div class="mode"><span id="modeBullet" class="mode-dot"></span><div><b id="modeName">Checking analysis mode...</b><small id="modeDescription">Connecting to local analysis API.</small></div></div>
+        </aside>
+      </div>
+      <section class="details" id="how"><div><div class="micro">PRIVACY BY DESIGN</div><h2>One check. Your choice.</h2></div><p>This demonstration evaluates drafts only at the moment you press Send or Post. It never sends real messages, runs background keystroke monitoring, or diagnoses your mental state. When AI mode is enabled, draft text goes to the configured API provider for analysis. The demo server does not retain drafts.</p></section>
+    </main>
+    <footer>PausePilot · Buildathon MVP · This is not a crisis support or medical service. All sends and posts are simulated.</footer>
+  </div>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="dialog">
+      <div class="icon-disc" aria-hidden="true">✳</div>
+      <div class="micro">PAUSEPILOT CHECK-IN</div>
+      <h2 id="modalTitle">Before you send...</h2>
+      <p id="modalReason">This message may deserve a second look.</p>
+      <p id="modalSuggestion" class="suggestion"></p>
+      <p id="modalMeta" class="smallprint"></p>
+      <div class="dialogbuttons"><button type="button" id="editButton" class="primary">Return to editing</button><button type="button" id="sendAnywayButton" class="secondary">Send anyway</button><button type="button" id="saveButton" class="tertiary">Keep as draft</button></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "PausePilot \u2014 Pre-Send Guard (Gmail Beta)",
+  "description": "Consent-based, on-send draft review on the PausePilot demo and supported Gmail compose windows. Gmail remains beta.",
+  "version": "0.4.1",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:4173/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "PausePilot",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost:4173/*",
+        "https://mail.google.com/*"
+      ],
+      "js": [
+        "gmail-helpers.js",
+        "content-script.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}

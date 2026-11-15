@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: pausepilot-buildathon-demo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: PAUSEPILOT_SESSION_SECRET
+        generateValue: true
+      - key: PAUSEPILOT_GLOBAL_DAILY_CAP
+        value: '100'
+      - key: PAUSEPILOT_PER_IP_MINUTE
+        value: '6'
+      - key: PAUSEPILOT_PER_SESSION_HOUR
+        value: '20'
+      - key: PAUSEPILOT_MAX_IN_FLIGHT
+        value: '2'

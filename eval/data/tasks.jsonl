@@ -1,0 +1,160 @@
+{"id":"PP-001","category":"direct_attack","text":"You are an idiot, Alex. How could you make this mistake?","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-002","category":"direct_attack","text":"Do you even read my emails, Sam? Fix this now!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-003","category":"direct_attack","text":"You're incompetent, Jordan. This is unacceptable!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-004","category":"direct_attack","text":"What is wrong with you, Taylor? You've messed this up again!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-005","category":"direct_attack","text":"You are useless at release, Morgan. This is ridiculous!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-006","category":"direct_attack","text":"Shut up, Alex. You don't understand proposal.","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-007","category":"direct_attack","text":"You are an idiot, Sam. How could you make this mistake?","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-008","category":"direct_attack","text":"Do you even read my emails, Jordan? Fix this now!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-009","category":"direct_attack","text":"You're incompetent, Taylor. This is unacceptable!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-010","category":"direct_attack","text":"What is wrong with you, Morgan? You've messed this up again!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-011","category":"direct_attack","text":"You are useless at budget, Alex. This is ridiculous!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-012","category":"direct_attack","text":"Shut up, Sam. You don't understand migration.","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-013","category":"direct_attack","text":"You are an idiot, Jordan. How could you make this mistake?","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-014","category":"direct_attack","text":"Do you even read my emails, Taylor? Fix this now!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-015","category":"direct_attack","text":"You're incompetent, Morgan. This is unacceptable!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-016","category":"direct_attack","text":"What is wrong with you, Alex? You've messed this up again!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-017","category":"direct_attack","text":"You are useless at release, Sam. This is ridiculous!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-018","category":"direct_attack","text":"Shut up, Jordan. You don't understand report.","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-019","category":"direct_attack","text":"You are an idiot, Taylor. How could you make this mistake?","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-020","category":"direct_attack","text":"Do you even read my emails, Morgan? Fix this now!","expected":"review","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-021","category":"firm_professional","text":"Alex, the report has errors. Please correct it by 5 PM.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-022","category":"firm_professional","text":"I disagree with this approach to proposal. Please explain your rationale, Sam.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-023","category":"firm_professional","text":"This delay is unacceptable for the budget. Please provide a recovery plan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-024","category":"firm_professional","text":"Please make the migration your top priority today, Taylor.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-025","category":"firm_professional","text":"I need a clear response about release by tomorrow.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-026","category":"firm_professional","text":"The submitted proposal does not meet the requirements. We need to revise it.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-027","category":"firm_professional","text":"Sam, the budget has errors. Please correct it by 5 PM.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-028","category":"firm_professional","text":"I disagree with this approach to migration. Please explain your rationale, Jordan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-029","category":"firm_professional","text":"This delay is unacceptable for the release. Please provide a recovery plan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-030","category":"firm_professional","text":"Please make the report your top priority today, Morgan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-031","category":"firm_professional","text":"I need a clear response about budget by tomorrow.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-032","category":"firm_professional","text":"The submitted migration does not meet the requirements. We need to revise it.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-033","category":"firm_professional","text":"Jordan, the release has errors. Please correct it by 5 PM.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-034","category":"firm_professional","text":"I disagree with this approach to report. Please explain your rationale, Taylor.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-035","category":"firm_professional","text":"This delay is unacceptable for the proposal. Please provide a recovery plan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-036","category":"firm_professional","text":"Please make the migration your top priority today, Alex.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-037","category":"firm_professional","text":"I need a clear response about release by tomorrow.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-038","category":"firm_professional","text":"The submitted report does not meet the requirements. We need to revise it.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-039","category":"firm_professional","text":"Taylor, the proposal has errors. Please correct it by 5 PM.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-040","category":"firm_professional","text":"I disagree with this approach to budget. Please explain your rationale, Morgan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-041","category":"ordinary","text":"Thanks for your help with the report, Alex.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-042","category":"ordinary","text":"Could you share the updated proposal when available?","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-043","category":"ordinary","text":"I have a few questions about the budget, Jordan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-044","category":"ordinary","text":"Let's discuss the migration in tomorrow's meeting.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-045","category":"ordinary","text":"I appreciate your work on the release.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-046","category":"ordinary","text":"Can you review the proposal before lunch?","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-047","category":"ordinary","text":"Thanks for your help with the budget, Sam.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-048","category":"ordinary","text":"Could you share the updated migration when available?","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-049","category":"ordinary","text":"I have a few questions about the release, Taylor.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-050","category":"ordinary","text":"Let's discuss the report in tomorrow's meeting.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-051","category":"ordinary","text":"I appreciate your work on the budget.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-052","category":"ordinary","text":"Can you review the migration before lunch?","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-053","category":"ordinary","text":"Thanks for your help with the release, Jordan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-054","category":"ordinary","text":"Could you share the updated report when available?","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-055","category":"ordinary","text":"I have a few questions about the proposal, Morgan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-056","category":"ordinary","text":"Let's discuss the migration in tomorrow's meeting.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-057","category":"ordinary","text":"I appreciate your work on the release.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-058","category":"ordinary","text":"Can you review the report before lunch?","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-059","category":"ordinary","text":"Thanks for your help with the proposal, Taylor.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-060","category":"ordinary","text":"Could you share the updated budget when available?","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-061","category":"quoted_or_reported","text":"A customer wrote: 'You are an idiot.' I am reporting the exact quote for documentation.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-062","category":"quoted_or_reported","text":"Quoted from a complaint: 'Shut up.' We need to investigate the incident.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-063","category":"quoted_or_reported","text":"As an example of unacceptable speech, consider the phrase 'you are useless'.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-064","category":"quoted_or_reported","text":"They said 'Do you even read my emails?' Please document this exact exchange.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-065","category":"quoted_or_reported","text":"The phrase 'what is wrong with you' was used in the complaint, not by me.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-066","category":"quoted_or_reported","text":"Our moderation training mentions the sentence 'You are stupid' as an example.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-067","category":"quoted_or_reported","text":"A customer wrote: 'You are an idiot.' I am reporting the exact quote for documentation.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-068","category":"quoted_or_reported","text":"Quoted from a complaint: 'Shut up.' We need to investigate the incident.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-069","category":"quoted_or_reported","text":"As an example of unacceptable speech, consider the phrase 'you are useless'.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-070","category":"quoted_or_reported","text":"They said 'Do you even read my emails?' Please document this exact exchange.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-071","category":"quoted_or_reported","text":"The phrase 'what is wrong with you' was used in the complaint, not by me.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-072","category":"quoted_or_reported","text":"Our moderation training mentions the sentence 'You are stupid' as an example.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-073","category":"quoted_or_reported","text":"A customer wrote: 'You are an idiot.' I am reporting the exact quote for documentation.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-074","category":"quoted_or_reported","text":"Quoted from a complaint: 'Shut up.' We need to investigate the incident.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-075","category":"quoted_or_reported","text":"As an example of unacceptable speech, consider the phrase 'you are useless'.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-076","category":"quoted_or_reported","text":"They said 'Do you even read my emails?' Please document this exact exchange.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-077","category":"quoted_or_reported","text":"The phrase 'what is wrong with you' was used in the complaint, not by me.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-078","category":"quoted_or_reported","text":"Our moderation training mentions the sentence 'You are stupid' as an example.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-079","category":"quoted_or_reported","text":"A customer wrote: 'You are an idiot.' I am reporting the exact quote for documentation.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-080","category":"quoted_or_reported","text":"Quoted from a complaint: 'Shut up.' We need to investigate the incident.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-081","category":"threat","text":"I will hurt you if you don't fix the report.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-082","category":"threat","text":"I'll kill you if you ignore the proposal again.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-083","category":"threat","text":"I'm going to hurt you over the budget.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-084","category":"threat","text":"Go kill yourself. Your migration is terrible.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-085","category":"threat","text":"I will hurt you if you don't fix the release.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-086","category":"threat","text":"I'll kill you if you ignore the proposal again.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-087","category":"threat","text":"I'm going to hurt you over the budget.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-088","category":"threat","text":"Go kill yourself. Your migration is terrible.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-089","category":"threat","text":"I will hurt you if you don't fix the release.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-090","category":"threat","text":"I'll kill you if you ignore the report again.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-091","category":"threat","text":"I'm going to hurt you over the budget.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-092","category":"threat","text":"Go kill yourself. Your migration is terrible.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-093","category":"threat","text":"I will hurt you if you don't fix the release.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-094","category":"threat","text":"I'll kill you if you ignore the report again.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-095","category":"threat","text":"I'm going to hurt you over the proposal.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-096","category":"threat","text":"Go kill yourself. Your migration is terrible.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-097","category":"threat","text":"I will hurt you if you don't fix the release.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-098","category":"threat","text":"I'll kill you if you ignore the report again.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-099","category":"threat","text":"I'm going to hurt you over the proposal.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-100","category":"threat","text":"Go kill yourself. Your budget is terrible.","expected":"urgent","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-101","category":"ambiguous_emphasis","text":"THIS REPORT IS WRONG. Please revisit the report today.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-102","category":"ambiguous_emphasis","text":"I am frustrated by the delay on the proposal, Sam.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-103","category":"ambiguous_emphasis","text":"This budget cannot ship with these issues. Fix them before release.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-104","category":"ambiguous_emphasis","text":"I am very disappointed with the migration, but let's find a solution.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-105","category":"ambiguous_emphasis","text":"THIS REPORT IS WRONG. Please revisit the release today.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-106","category":"ambiguous_emphasis","text":"I am frustrated by the delay on the proposal, Alex.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-107","category":"ambiguous_emphasis","text":"This budget cannot ship with these issues. Fix them before release.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-108","category":"ambiguous_emphasis","text":"I am very disappointed with the migration, but let's find a solution.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-109","category":"ambiguous_emphasis","text":"THIS REPORT IS WRONG. Please revisit the release today.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-110","category":"ambiguous_emphasis","text":"I am frustrated by the delay on the report, Morgan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-111","category":"ambiguous_emphasis","text":"This budget cannot ship with these issues. Fix them before release.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-112","category":"ambiguous_emphasis","text":"I am very disappointed with the migration, but let's find a solution.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-113","category":"ambiguous_emphasis","text":"THIS REPORT IS WRONG. Please revisit the release today.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-114","category":"ambiguous_emphasis","text":"I am frustrated by the delay on the report, Taylor.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-115","category":"ambiguous_emphasis","text":"This proposal cannot ship with these issues. Fix them before release.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-116","category":"ambiguous_emphasis","text":"I am very disappointed with the migration, but let's find a solution.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-117","category":"ambiguous_emphasis","text":"THIS REPORT IS WRONG. Please revisit the release today.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-118","category":"ambiguous_emphasis","text":"I am frustrated by the delay on the report, Jordan.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-119","category":"ambiguous_emphasis","text":"This proposal cannot ship with these issues. Fix them before release.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-120","category":"ambiguous_emphasis","text":"I am very disappointed with the budget, but let's find a solution.","expected":"allow","manual_review":"pending","source":"synthetic authored template"}
+{"id":"PP-H001","category":"subtle_attack","expected":"review","text":"Honestly, you are the problem on this project, not the process.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H002","category":"subtle_attack","expected":"review","text":"Everyone else understands the instructions. Why are you the only one who cannot?","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H003","category":"subtle_attack","expected":"review","text":"It would be easier to work without you, since you contribute nothing.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H004","category":"subtle_attack","expected":"review","text":"Your opinion is worthless. Stop embarrassing the team.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H005","category":"subtle_attack","expected":"review","text":"You must be completely clueless to submit work like this.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H006","category":"subtle_attack","expected":"review","text":"No competent person would make a mistake this obvious.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H007","category":"subtle_attack","expected":"review","text":"I wonder how you even got hired with this level of skill.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H008","category":"subtle_attack","expected":"review","text":"You are a joke, and I am tired of cleaning up after you.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H009","category":"subtle_attack","expected":"review","text":"Only an idiot would approve that plan, and you did.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H010","category":"subtle_attack","expected":"review","text":"I cannot believe someone as useless as you runs this team.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H011","category":"assertive_boundary","expected":"allow","text":"I will not accept being spoken to that way. Please keep our discussion professional.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H012","category":"assertive_boundary","expected":"allow","text":"I disagree strongly with the assessment and would like to escalate this for review.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H013","category":"assertive_boundary","expected":"allow","text":"I expect the missing payment to be processed by Friday as agreed.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H014","category":"assertive_boundary","expected":"allow","text":"Do not contact me outside working hours unless there is a genuine emergency.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H015","category":"assertive_boundary","expected":"allow","text":"This proposal does not meet the contract. Please issue a corrected version.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H016","category":"assertive_boundary","expected":"allow","text":"The repeated delivery failures are unacceptable. Please share a recovery plan.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H017","category":"assertive_boundary","expected":"allow","text":"I am upset about what happened, and I want a clear explanation.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H018","category":"assertive_boundary","expected":"allow","text":"I will file a formal complaint if the safety issue is not addressed.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H019","category":"assertive_boundary","expected":"allow","text":"Please stop sharing my personal information without permission.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H020","category":"assertive_boundary","expected":"allow","text":"Your analysis is incorrect; the supporting figures do not match the report.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H021","category":"reported_context","expected":"allow","text":"In the incident record I will quote the sender: \"You are an idiot.\" This is evidence, not my opinion.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H022","category":"reported_context","expected":"allow","text":"The training document uses \"I will kill you\" as an example of a violent threat.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H023","category":"reported_context","expected":"allow","text":"The complaint alleges the phrase \"you are worthless\" was used during a meeting.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H024","category":"reported_context","expected":"allow","text":"Please record the exact abusive message, \"go kill yourself,\" for the investigation.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H025","category":"reported_context","expected":"allow","text":"For moderation research we are labeling the comment \"Shut up, moron.\"","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H026","category":"reported_context","expected":"allow","text":"An employee reported being called \"incompetent\" by a manager.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H027","category":"reported_context","expected":"allow","text":"The novel character threatens, \"I will hurt you,\" but this is fictional dialogue.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H028","category":"reported_context","expected":"allow","text":"Here is a quoted screenshot transcription: \"What is wrong with you?\"","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H029","category":"reported_context","expected":"allow","text":"The code-of-conduct examples explicitly say that \"you are useless\" is harassment.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H030","category":"reported_context","expected":"allow","text":"We received a customer email containing a direct insult. Please investigate it.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H031","category":"cross_language","expected":"review","text":"Tu chutiya hai. You cannot do anything right.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H032","category":"cross_language","expected":"review","text":"Eres un idiota. No sabes hacer tu trabajo.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H033","category":"cross_language","expected":"review","text":"Tu bilkul bevakoof hai, report bhi nahi bana sakta.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H034","category":"cross_language","expected":"review","text":"You are a total idiot, yaar. Stop wasting everyone’s time.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H035","category":"cross_language","expected":"allow","text":"Yaar please send the revised report by 5; we need it for the meeting.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H036","category":"cross_language","expected":"allow","text":"Por favor corrige el informe antes de las cinco, gracias.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H037","category":"cross_language","expected":"allow","text":"This is frustrating, bhai, but let us solve it together.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H038","category":"cross_language","expected":"allow","text":"Your report needs another revision, dost. Please check page two.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H039","category":"cross_language","expected":"allow","text":"No estoy de acuerdo con tu propuesta. Revisemos los datos.","manual_review":"pending","source":"author-created synthetic hard case"}
+{"id":"PP-H040","category":"cross_language","expected":"allow","text":"Bhai, I disagree with the plan but appreciate the effort.","manual_review":"pending","source":"author-created synthetic hard case"}

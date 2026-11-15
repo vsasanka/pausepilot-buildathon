@@ -1,0 +1,36 @@
+{
+  "name": "pausepilot-mvp",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Modular, publicly deployable PausePilot AI for Good interactive web demo with optional local Gmail extension",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test tests/*.test.mjs",
+    "eval": "node scripts/phase4-run.mjs --dataset eval --mode rules",
+    "eval:make": "node eval/generate.mjs && node eval/extend-data.mjs",
+    "start:ai": "node --env-file=.env server.js",
+    "smoke:ai": "node --env-file=.env scripts/smoke-ai.mjs",
+    "eval:ai": "node --env-file=.env scripts/phase4-run.mjs --dataset eval --mode ai",
+    "safety:ai": "node --env-file=.env scripts/phase4-run.mjs --dataset safety --mode ai",
+    "test:gmail:logic": "node --test tests/gmail-logic.test.mjs",
+    "safety:make": "node safety/generate.mjs && node safety/extend-data.mjs",
+    "review:queue": "node scripts/prepare-review.mjs",
+    "eval:phase4:rules": "node scripts/phase4-run.mjs --dataset eval --mode rules",
+    "safety:phase4:rules": "node scripts/phase4-run.mjs --dataset safety --mode rules",
+    "safety:phase4:guarded": "node scripts/phase4-run.mjs --dataset safety --mode guarded",
+    "eval:phase4:ai": "node --env-file=.env scripts/phase4-run.mjs --dataset eval --mode ai",
+    "eval:phase4:compare": "node --env-file=.env scripts/phase4-run.mjs --dataset eval --mode compare",
+    "safety:phase4:ai": "node --env-file=.env scripts/phase4-run.mjs --dataset safety --mode ai",
+    "safety:phase4:compare": "node --env-file=.env scripts/phase4-run.mjs --dataset safety --mode compare",
+    "security:audit": "node scripts/security-audit.mjs",
+    "review:import": "node scripts/import-reviews.mjs",
+    "safety": "node scripts/phase4-run.mjs --dataset safety --mode rules",
+    "test:deployment": "node --test tests/deployment.test.mjs",
+    "smoke:deploy": "node scripts/smoke-deploy.mjs"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}

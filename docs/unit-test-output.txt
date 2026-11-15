@@ -1,0 +1,164 @@
+
+> pausepilot-mvp@0.3.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Structured output schema defines all required fields
+ok 1 - Structured output schema defines all required fields
+  ---
+  duration_ms: 2.152171
+  type: 'test'
+  ...
+# Subtest: Sends untrusted text as user content and returns an AI decision
+ok 2 - Sends untrusted text as user content and returns an AI decision
+  ---
+  duration_ms: 1.230173
+  type: 'test'
+  ...
+# Subtest: Allows non-hostile messages and removes unsolicited suggestions
+ok 3 - Allows non-hostile messages and removes unsolicited suggestions
+  ---
+  duration_ms: 0.541716
+  type: 'test'
+  ...
+# Subtest: Does not silently fall back to demo rules on provider HTTP error
+ok 4 - Does not silently fall back to demo rules on provider HTTP error
+  ---
+  duration_ms: 1.159767
+  type: 'test'
+  ...
+# Subtest: Does not automatically allow an AI refusal or truncated answer
+ok 5 - Does not automatically allow an AI refusal or truncated answer
+  ---
+  duration_ms: 0.814397
+  type: 'test'
+  ...
+# Subtest: Rejects malformed decisions and clips reason lengths
+ok 6 - Rejects malformed decisions and clips reason lengths
+  ---
+  duration_ms: 0.437329
+  type: 'test'
+  ...
+# Subtest: Reports safe 429 error code for billing diagnosis without leaking raw provider messages
+ok 7 - Reports safe 429 error code for billing diagnosis without leaking raw provider messages
+  ---
+  duration_ms: 0.914087
+  type: 'test'
+  ...
+# Subtest: HTTP 429 can be diagnosed even when provider returns a non-JSON body
+ok 8 - HTTP 429 can be diagnosed even when provider returns a non-JSON body
+  ---
+  duration_ms: 0.567354
+  type: 'test'
+  ...
+# Subtest: Classifies "You've messed this up again. Do you even"
+ok 9 - Classifies "You've messed this up again. Do you even"
+  ---
+  duration_ms: 2.690943
+  type: 'test'
+  ...
+# Subtest: Classifies "Please correct the figures by 5 PM."
+ok 10 - Classifies "Please correct the figures by 5 PM."
+  ---
+  duration_ms: 1.40722
+  type: 'test'
+  ...
+# Subtest: Classifies "I disagree with this decision."
+ok 11 - Classifies "I disagree with this decision."
+  ---
+  duration_ms: 0.547545
+  type: 'test'
+  ...
+# Subtest: Classifies "You are an idiot."
+ok 12 - Classifies "You are an idiot."
+  ---
+  duration_ms: 0.256587
+  type: 'test'
+  ...
+# Subtest: Classifies "I will hurt you if you do not comply."
+ok 13 - Classifies "I will hurt you if you do not comply."
+  ---
+  duration_ms: 0.230107
+  type: 'test'
+  ...
+# Subtest: Classifies "A customer wrote: \\"You are an idiot.\\" I "
+ok 14 - Classifies "A customer wrote: \\"You are an idiot.\\" I "
+  ---
+  duration_ms: 0.240652
+  type: 'test'
+  ...
+# Subtest: Send label recognized: {"text":"Send"}
+ok 15 - Send label recognized: {"text":"Send"}
+  ---
+  duration_ms: 1.435773
+  type: 'test'
+  ...
+# Subtest: Send label recognized: {"aria-label":"Send (⌘Enter)"}
+ok 16 - Send label recognized: {"aria-label":"Send (⌘Enter)"}
+  ---
+  duration_ms: 0.257788
+  type: 'test'
+  ...
+# Subtest: Send label recognized: {"data-tooltip":"Send ‪(⌘Enter)‬"}
+ok 17 - Send label recognized: {"data-tooltip":"Send ‪(⌘Enter)‬"}
+  ---
+  duration_ms: 0.14633
+  type: 'test'
+  ...
+# Subtest: Send label recognized: {"data-tooltip":"Send (Ctrl+Enter)"}
+ok 18 - Send label recognized: {"data-tooltip":"Send (Ctrl+Enter)"}
+  ---
+  duration_ms: 0.224358
+  type: 'test'
+  ...
+# Subtest: Unrelated button not mistaken for Send: {"text":"Send & archive"}
+ok 19 - Unrelated button not mistaken for Send: {"text":"Send & archive"}
+  ---
+  duration_ms: 0.187983
+  type: 'test'
+  ...
+# Subtest: Unrelated button not mistaken for Send: {"text":"Schedule send"}
+ok 20 - Unrelated button not mistaken for Send: {"text":"Schedule send"}
+  ---
+  duration_ms: 0.196596
+  type: 'test'
+  ...
+# Subtest: Unrelated button not mistaken for Send: {"text":"Resend"}
+ok 21 - Unrelated button not mistaken for Send: {"text":"Resend"}
+  ---
+  duration_ms: 0.128693
+  type: 'test'
+  ...
+# Subtest: Unrelated button not mistaken for Send: {"aria-label":"Send to trash"}
+ok 22 - Unrelated button not mistaken for Send: {"aria-label":"Send to trash"}
+  ---
+  duration_ms: 0.115914
+  type: 'test'
+  ...
+# Subtest: Unrelated button not mistaken for Send: {}
+ok 23 - Unrelated button not mistaken for Send: {}
+  ---
+  duration_ms: 0.406212
+  type: 'test'
+  ...
+# Subtest: Snapshot changes when recipient or subject changes
+ok 24 - Snapshot changes when recipient or subject changes
+  ---
+  duration_ms: 0.715979
+  type: 'test'
+  ...
+# Subtest: Rendered recipient chips also invalidate approval snapshots
+ok 25 - Rendered recipient chips also invalidate approval snapshots
+  ---
+  duration_ms: 0.281994
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 105.86375
