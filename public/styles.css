@@ -9,3 +9,38 @@
 .coming-soon{font-size:12px;color:#7c8985;border:1px dashed #ceddd4;padding:11px 14px;border-radius:11px}
 #exampleButtons{display:flex;gap:8px;flex-wrap:wrap}
 [hidden]{display:none!important}
+
+/* Mouse Movement Lab: isolated from both text composer modules. */
+.exp-label{display:inline-block;margin-left:5px;color:#6c8176;font-size:9px;letter-spacing:.75px;font-weight:800}
+.movement-lab{margin-top:2px}
+.movement-intro{max-width:790px;margin:14px 0 22px}
+.movement-intro h2{font-size:30px;letter-spacing:-.8px;margin:9px 0}
+.movement-intro p{font-size:14px;color:var(--muted);margin:0}
+.movement-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.85fr);gap:24px}
+.motion-main .paneheading{align-items:start}
+.motion-buttons{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 16px}
+.motion-pad{min-height:305px;position:relative;border:1px solid #bfd8cb;border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;background-color:#f4faf5;background-image:radial-gradient(#cee5d5 1px,transparent 1px);background-size:20px 20px;overflow:hidden;user-select:none;touch-action:auto}
+.motion-pad.is-monitoring{border-color:#64a588;background-color:#eaf6ee;cursor:crosshair}
+.motion-pad-orb{width:70px;height:70px;border-radius:22px;display:grid;place-items:center;background:#d7eadc;color:#397e63;font-size:44px;pointer-events:none}
+.motion-pad-label{font-size:14px;color:#436959;max-width:320px;line-height:1.6;font-weight:550;pointer-events:none;padding:0 10px}
+.motion-pad-corner{position:absolute;bottom:15px;right:17px;color:#689079;font-size:9px;letter-spacing:1px;font-weight:800;pointer-events:none}
+.motion-privacy{display:flex;align-items:flex-start;gap:10px;margin-top:18px;color:#5d746b;font-size:12px;line-height:1.65}
+.motion-privacy>span:first-child{color:#27745f;font-size:22px;line-height:1}
+.motion-insight{display:flex;flex-direction:column}
+.motion-status{font-size:24px;font-weight:750;letter-spacing:-.5px;margin:18px 0 8px;color:#296d56}
+.motion-description{font-size:13px;color:var(--muted);margin:0 0 20px;min-height:57px}
+.motion-meter-label{display:flex;justify-content:space-between;font-size:12px;color:#526f61;margin:12px 0 8px;gap:10px}
+.motion-meter-label span:last-child{font-weight:750}
+.motion-meter{height:9px;border-radius:20px;background:#e4eee8;overflow:hidden}
+.motion-meter span{display:block;height:100%;background:#6ba68b;border-radius:inherit;transition:width .25s ease}
+.motion-meter span.elevated{background:#b78b4a}
+.motion-metrics{display:grid;gap:13px;margin-top:25px}
+.motion-metrics>div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:11px;font-size:12px;color:#6b8075}
+.motion-metrics b{color:#2d5545;font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.motion-nudge{padding:15px;border:1px solid #e4d1ac;background:#fff8e9;border-radius:11px;margin-top:24px}
+.motion-nudge b{font-size:14px;color:#77592d}
+.motion-nudge p{font-size:12px;color:#806b4c;margin:8px 0 13px}
+.motion-nudge button{padding:8px 12px}
+.motion-disclaimer{font-size:11px!important;color:#788a80!important;line-height:1.6;margin-top:auto!important;padding-top:24px}
+@media(max-width:800px){.movement-grid{grid-template-columns:1fr}.motion-pad{min-height:260px}.motion-status{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.motion-meter span{transition:none}}

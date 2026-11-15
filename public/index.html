@@ -7,6 +7,7 @@
   <meta name="description" content="PausePilot is an opt-in pre-send review experience. It helps you pause before a potentially regrettable message." />
   <link rel="stylesheet" href="/styles.css" />
   <script defer src="/app.js"></script>
+  <script type="module" src="/movement-lab.js"></script>
 </head>
 <body>
   <div class="shell">
@@ -23,9 +24,9 @@
       <nav id="featureTabs" class="feature-tabs" aria-label="Choose demo feature" role="tablist">
         <button type="button" class="feature-tab active" data-feature="email" role="tab" aria-selected="true">✉ Email Send Guard</button>
         <button type="button" class="feature-tab" data-feature="comment" role="tab" aria-selected="false">💬 Comment Guard</button>
-        <span class="coming-soon">Focus Drift · Coming later</span>
+        <button type="button" id="movementTab" class="feature-tab feature-tab-experimental" role="tab" aria-selected="false" aria-controls="movementLab">↝ Mouse Movement Lab <span class="exp-label">EXPERIMENTAL</span></button>
       </nav>
-      <div class="workbench">
+      <div class="workbench" id="messageWorkbench">
         <section class="pane composer">
           <div class="paneheading"><div><div class="micro">LIVE INTERACTIVE DEMO</div><h2 id="composeTitle">Compose an email</h2></div><span class="hint" id="composerHint">Simulation only · No email is sent</span></div>
           <form id="demoCompose" autocomplete="off">
@@ -49,7 +50,36 @@
           <div class="mode"><span id="modeBullet" class="mode-dot"></span><div><b id="modeName">Checking analysis mode...</b><small id="modeDescription">Connecting to local analysis API.</small></div></div>
         </aside>
       </div>
-      <section class="details" id="how"><div><div class="micro">PRIVACY BY DESIGN</div><h2>One check. Your choice.</h2></div><p>This demonstration evaluates drafts only at the moment you press Send or Post. It never sends real messages, runs background keystroke monitoring, or diagnoses your mental state. When AI mode is enabled, draft text goes to the configured API provider for analysis. The demo server does not retain drafts.</p></section>
+      <section class="movement-lab" id="movementLab" hidden aria-label="Mouse movement experiment">
+        <div class="movement-intro">
+          <div class="micro">OPT-IN · ON-DEVICE EXPERIMENT</div>
+          <h2>How is your pointer moving?</h2>
+          <p>PausePilot can flag a <strong>change in mouse movement patterns</strong> compared with a short baseline. This cannot tell whether you feel stressed, anxious, restless, or simply playful. Only movements inside the test pad are considered.</p>
+        </div>
+        <div class="movement-grid">
+          <section class="pane motion-main" aria-label="Mouse movement test area">
+            <div class="paneheading"><div><div class="micro">THE EXPERIMENT</div><h2>Move at your own pace.</h2></div><span class="hint">No sign-in or AI credits required</span></div>
+            <div class="motion-buttons"><button type="button" class="primary" id="motionStart">Start 5-second baseline</button><button type="button" class="secondary" id="motionStop" disabled>Stop &amp; clear</button></div>
+            <div id="motionPad" class="motion-pad" aria-label="Mouse tracking pad; cursor tracked only here when enabled">
+              <div class="motion-pad-orb" aria-hidden="true">✳</div>
+              <div class="motion-pad-label" id="motionPadLabel">Press Start, then move slowly and naturally in this area.</div>
+              <span class="motion-pad-corner" aria-hidden="true">MOVEMENT ZONE ONLY</span>
+            </div>
+            <div class="motion-privacy"><span aria-hidden="true">◈</span><span><strong>Private by default.</strong> No motion tracking before Start. No tracking outside this area, no background recording, no server calls, no browser storage. Stop clears the measurement. Switching tabs or leaving the page also stops it.</span></div>
+          </section>
+          <aside class="pane motion-insight" aria-label="Movement measurements">
+            <div class="micro">LIVE OBSERVATION</div>
+            <div class="motion-status" id="motionStatus" role="status" aria-live="polite">Not monitoring</div>
+            <p id="motionDescription" class="motion-description">Enable the experiment when you want to try it. We'll first observe how you normally move the pointer.</p>
+            <div class="motion-meter-label"><span>Movement variation</span><span id="motionVariationLabel">No data</span></div>
+            <div class="motion-meter" role="presentation"><span id="motionVariationFill" style="width:0%"></span></div>
+            <div class="motion-metrics"><div><span>Directional changes / second</span><b id="motionTurnRate">—</b></div><div><span>Movement speed (pixels / sec)</span><b id="motionSpeed">—</b></div></div>
+            <div class="motion-nudge" id="motionNudge" hidden><b>A small pause might help.</b><p>Your movement has changed compared with your brief baseline. That could have many causes. Would you like to rest your hands for a moment?</p><button type="button" class="secondary" id="motionDismiss">Dismiss</button></div>
+            <p class="motion-disclaimer">This is an unvalidated behavioral prototype. Device sensitivity, desk space, tasks, disability, and individual preferences can affect the signal. No diagnosis or stress score is generated.</p>
+          </aside>
+        </div>
+      </section>
+      <section class="details" id="how"><div><div class="micro">PRIVACY BY DESIGN</div><h2>One check. Your choice.</h2></div><p>Email and Comment Guard evaluate drafts only when you press Send or Post. Mouse Movement Lab is a separate, explicit opt-in and only processes pointer movement within its test area in your browser. No mouse coordinates are transmitted or stored. The website never sends actual messages, records background keystrokes, or diagnoses your mental state. In AI mode, draft text—not pointer motion—is shared with the configured provider when you click Send/Post.</p></section>
     </main>
     <footer>PausePilot · Buildathon MVP · This is not a crisis support or medical service. All sends and posts are simulated.</footer>
   </div>
